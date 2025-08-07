@@ -114,10 +114,60 @@
         </section>
         <section id="certificates" class="section-card fade-in">
             <h3><i class="fa fa-certificate"></i> Certifications</h3>
-            <ul class="cert-list">
-                <li><i class="fa fa-certificate"></i> Machine Learning by Andrew Ng — Stanford University (Coursera)</li>
-                <li><i class="fa fa-certificate"></i> Completed introductory and intermediate-level courses on DataCamp (python, SQL, machine learning, data visualization) — <a href="https://datacamp.com/portfolio/mohamedasaad" target="_blank" class="project-link">view full profile</a></li>
-            </ul>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <img src="images/cer1.PNG" alt="Data Analysis Bootcamp Certificate">
+                    <div class="certificate-content">
+                        <h4>Data Analysis Bootcamp</h4>
+                        <p class="cert-brief">Advanced SQL techniques and practical applications on Azure Cloud</p>
+                        <button class="cert-toggle" onclick="toggleCertDetails(this)">View Details</button>
+                        <div class="cert-details" style="display: none;">
+                            <p>This hands-on training covered advanced SQL techniques and practical applications on Azure Cloud. I learned how to automate the data analysis process, integrate SQL Server with Power BI, Python, and cloud services, and build efficient, end-to-end data pipelines. The program focused on real-world scenarios, enhancing my ability to manage and analyze data in a scalable and automated way.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <img src="images/cer2.PNG" alt="Data Science Trainee Certificate">
+                    <div class="certificate-content">
+                        <h4>Data Science Trainee</h4>
+                        <p class="cert-brief">Comprehensive data science training with Python, ML, and real-world projects</p>
+                        <button class="cert-toggle" onclick="toggleCertDetails(this)">View Details</button>
+                        <div class="cert-details" style="display: none;">
+                            <ul>
+                                <li>Python for Data Science – data structures, functions, libraries (NumPy, Pandas)</li>
+                                <li>Data Cleaning & Preparation – handling missing data, formatting, transformation</li>
+                                <li>Exploratory Data Analysis (EDA) – uncovering insights using statistics and visualization (Matplotlib, Seaborn)</li>
+                                <li>Machine Learning – supervised/unsupervised learning, model evaluation, real-world use cases</li>
+                                <li>AI Applications & MLOps – model deployment and lifecycle tools</li>
+                                <li>SQL & Databases – querying, filtering, and joining structured data</li>
+                                <li>Capstone Project – end-to-end implementation of a real-world data science project</li>
+                                <li>Soft Skills – communication, teamwork, freelancing, and English for business</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <img src="images/cer3.PNG" alt="Machine Learning Certificate">
+                    <div class="certificate-content">
+                        <h4>Supervised Machine Learning: Regression and Classification</h4>
+                        <p class="cert-brief">DeepLearning.AI & Stanford University via Coursera</p>
+                        <div class="cert-credential">
+                            <a href="https://www.coursera.org/account/accomplishments/verify/01J4SZZKOIHY" target="_blank" class="credential-link">
+                                <i class="fa fa-external-link-alt"></i> Verify Credential
+                            </a>
+                        </div>
+                        <button class="cert-toggle" onclick="toggleCertDetails(this)">View Details</button>
+                        <div class="cert-details" style="display: none;">
+                            <p>Comprehensive course covering supervised machine learning techniques including regression and classification. Skills gained include building machine learning models in Python using NumPy & scikit-learn, training supervised models for prediction & binary classification tasks, including linear regression & logistic regression.</p>
+                            <div class="cert-skills">
+                                <strong>Skills Gained:</strong> Algorithms, Scikit Learn, Predictive Modeling, Supervised Learning, Regression Analysis, Feature Engineering, Statistical Modeling, Applied Machine Learning, NumPy, Machine Learning, Python Programming
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="skills" class="section-card fade-in">
             <h3><i class="fa fa-tools"></i> Skills & Tools</h3>
