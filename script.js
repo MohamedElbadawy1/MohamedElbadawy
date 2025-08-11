@@ -22,4 +22,49 @@ function toggleCertDetails(button) {
         details.style.display = 'none';
         button.textContent = 'View Details';
     }
-} 
+}
+
+// Scrollspy: highlight active nav link based on section in view
+(function initScrollSpy() {
+    const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+
+    const idToLink = new Map(
+        navLinks.map((link) => [link.getAttribute('href').replace('#', ''), link])
+    );
+
+    function setActive(id) {
+        navLinks.forEach((l) => l.classList.remove('active'));
+        const link = idToLink.get(id);
+        if (link) link.classList.add('active');
+    }
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActive(entry.target.id);
+                }
+            });
+        },
+        {
+            root: null,
+            rootMargin: '0px 0px -40% 0px', // trigger a bit before center
+            threshold: 0.4,
+        }
+    );
+
+    sections.forEach((sec) => observer.observe(sec));
+
+    // Also set active on click immediately
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            navLinks.forEach((l) => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    // Initial state on load (in case a hash is present)
+    const initial = window.location.hash.replace('#', '') || (sections[0] && sections[0].id);
+    if (initial) setActive(initial);
+})(); 
